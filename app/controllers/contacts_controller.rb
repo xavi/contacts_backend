@@ -3,7 +3,6 @@ class ContactsController < ApplicationController
 
   # GET /contacts
   def index
-    #TODO Add index for updated_at
     @contacts = Contact.order(updated_at: :desc)
 
     render json: @contacts
